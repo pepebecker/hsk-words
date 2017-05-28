@@ -1,6 +1,5 @@
 # HSK Words
 
-[![npm version](https://img.shields.io/npm/v/hsk-words.svg)](https://www.npmjs.com/package/hsk-words)
 [![Travis Build Status](https://travis-ci.org/pepebecker/hsk-words.svg)](https://travis-ci.org/pepebecker/hsk-words)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/hsk-words/badge.svg)](https://coveralls.io/github/pepebecker/hsk-words)
 [![dependency status](https://img.shields.io/david/pepebecker/hsk-words.svg)](https://david-dm.org/pepebecker/hsk-words)
@@ -11,7 +10,7 @@
 ## Install
 
 ```shell
-npm install hsk-words
+npm install pepebecker/hsk-words
 ```
 
 ## Usage
