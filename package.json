@@ -8,6 +8,8 @@
   ],
   "scripts": {
     "test": "mocha",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "dl1": "curl -sL http://data.hskhsk.com/lists/HSK%20Official%20With%20Definitions%202012%20L1.txt > build/HSK1.txt",
     "dl2": "curl -sL http://data.hskhsk.com/lists/HSK%20Official%20With%20Definitions%202012%20L2.txt > build/HSK2.txt",
     "dl3": "curl -sL http://data.hskhsk.com/lists/HSK%20Official%20With%20Definitions%202012%20L3.txt > build/HSK3.txt",
