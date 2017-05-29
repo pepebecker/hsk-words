@@ -1,14 +1,7 @@
 'use strict'
 
-const hsk1 = require('./data/hsk1.json')
-const hsk2 = require('./data/hsk2.json')
-const hsk3 = require('./data/hsk3.json')
-const hsk4 = require('./data/hsk4.json')
-const hsk5 = require('./data/hsk5.json')
-const hsk6 = require('./data/hsk6.json')
-
 const get = (text) => new Promise((yay, nay) => {
-	let item = hsk1[text]
+	let item = require('./data/hsk1.json')[text]
 
 	if (item) {
 		item.hsk = 1
@@ -16,7 +9,7 @@ const get = (text) => new Promise((yay, nay) => {
 		return
 	}
 
-	item = hsk2[text]
+	item = require('./data/hsk2.json')[text]
 
 	if (item) {
 		item.hsk = 2
@@ -24,7 +17,7 @@ const get = (text) => new Promise((yay, nay) => {
 		return
 	}
 
-	item = hsk3[text]
+	item = require('./data/hsk3.json')[text]
 
 	if (item) {
 		item.hsk = 3
@@ -32,7 +25,7 @@ const get = (text) => new Promise((yay, nay) => {
 		return
 	}
 
-	item = hsk4[text]
+	item = require('./data/hsk4.json')[text]
 
 	if (item) {
 		item.hsk = 4
@@ -40,7 +33,7 @@ const get = (text) => new Promise((yay, nay) => {
 		return
 	}
 
-	item = hsk5[text]
+	item = require('./data/hsk5.json')[text]
 
 	if (item) {
 		item.hsk = 5
@@ -48,7 +41,7 @@ const get = (text) => new Promise((yay, nay) => {
 		return
 	}
 
-	item = hsk6[text]
+	item = require('./data/hsk6.json')[text]
 
 	if (item) {
 		item.hsk = 6
