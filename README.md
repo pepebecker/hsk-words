@@ -1,5 +1,7 @@
 # HSK Words
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pepebecker/hsk-words.svg)](https://greenkeeper.io/)
+
 [![Travis Build Status](https://travis-ci.org/pepebecker/hsk-words.svg)](https://travis-ci.org/pepebecker/hsk-words)
 [![Coverage Status](https://coveralls.io/repos/github/pepebecker/hsk-words/badge.svg)](https://coveralls.io/github/pepebecker/hsk-words)
 [![dependency status](https://img.shields.io/david/pepebecker/hsk-words.svg)](https://david-dm.org/pepebecker/hsk-words)
