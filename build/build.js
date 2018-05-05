@@ -15,13 +15,12 @@ rl.on('line', (line) => {
 
     if (line.length === 0) return
 
-    const [simpl, tradi, pinyinNumberd, pinyin, def] = line.split('\t')
+    const [simpl, tradi, _, pinyin, def] = line.split('\t')
 
 	const item = {
 		simplified: simpl,
 		traditional: tradi,
 		pinyin: pinyin,
-		pinyinN: pinyinNumberd,
 		definition: def
 	}
 

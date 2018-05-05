@@ -2,12 +2,37 @@
   "name": "hsk-words",
   "version": "1.0.0",
   "description": "Get information about HSK words.",
-  "main": "index.js",
+  "keywords": [
+    "chinese",
+    "hanzi",
+    "hsk",
+    "mandarin",
+    "pinyin"
+  ],
+  "homepage": "https://github.com/pepebecker/hsk-words#readme",
+  "bugs": {
+    "url": "https://github.com/pepebecker/hsk-words/issues"
+  },
+  "license": "MIT",
+  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
   "files": [
     "data"
   ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pepebecker/hsk-words.git"
+  },
   "scripts": {
-    "test": "mocha",
+    "b1": "node build/build.js build/HSK1.txt > data/hsk1.json",
+    "b2": "node build/build.js build/HSK2.txt > data/hsk2.json",
+    "b3": "node build/build.js build/HSK3.txt > data/hsk3.json",
+    "b4": "node build/build.js build/HSK4.txt > data/hsk4.json",
+    "b5": "node build/build.js build/HSK5.txt > data/hsk5.json",
+    "b6": "node build/build.js build/HSK6.txt > data/hsk6.json",
+    "build": "npm run setup && npm run buildAll && npm run cleanup",
+    "buildAll": "npm run b1 && npm run b2 && npm run b3 && npm run b4 && npm run b5 && npm run b6",
+    "cleanup": "rm -rf build/HSK*.txt",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
     "dl1": "curl -sL http://data.hskhsk.com/lists/HSK%20Official%20With%20Definitions%202012%20L1.txt > build/HSK1.txt",
@@ -18,38 +43,13 @@
     "dl6": "curl -sL http://data.hskhsk.com/lists/HSK%20Official%20With%20Definitions%202012%20L6.txt > build/HSK6.txt",
     "download": "npm run dl1 && npm run dl2 && npm run dl3 && npm run dl4 && npm run dl5 && npm run dl6",
     "setup": "npm run download && mkdir -p data",
-    "cleanup": "rm -rf build/HSK*.txt",
-    "b1": "node build/build.js build/HSK1.txt > data/hsk1.json",
-    "b2": "node build/build.js build/HSK2.txt > data/hsk2.json",
-    "b3": "node build/build.js build/HSK3.txt > data/hsk3.json",
-    "b4": "node build/build.js build/HSK4.txt > data/hsk4.json",
-    "b5": "node build/build.js build/HSK5.txt > data/hsk5.json",
-    "b6": "node build/build.js build/HSK6.txt > data/hsk6.json",
-    "buildAll": "npm run b1 && npm run b2 && npm run b3 && npm run b4 && npm run b5 && npm run b6",
-    "build": "npm run setup && npm run buildAll && npm run cleanup"
+    "test": "mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pepebecker/hsk-words.git"
-  },
-  "keywords": [
-    "mandarin",
-    "chinese",
-    "hsk",
-    "pinyin",
-    "hanzi"
-  ],
-  "author": "Pepe Becker <mail@pepebecker.com> (http://pepebecker.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pepebecker/hsk-words/issues"
-  },
-  "homepage": "https://github.com/pepebecker/hsk-words#readme",
   "devDependencies": {
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2",
+    "mocha": "^5.1.1",
     "mocha-lcov-reporter": "^1.3.0",
-    "should": "^11.2.1"
+    "should": "^13.2.1"
   }
 }

@@ -2,15 +2,15 @@
 
 const hsk = require('../index')
 
-describe('Get character from cangjie code', () => {
+describe('Test Pinyin and HSK level', () => {
 	it('should return wǒ', () => {
-		return hsk.get('我').then((data) => {
+		return hsk('我').then((data) => {
 			data.pinyin.should.equal('wǒ')
 		})
 	})
 
 	it('should return 1', () => {
-		return hsk.get('爸爸').then((data) => {
+		return hsk('爸爸').then((data) => {
 			data.hsk.should.equal(1)
 		})
 	})
